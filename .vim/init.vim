@@ -86,3 +86,5 @@ autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
 autocmd Filetype elixir setlocal ts=2 sts=2 sw=2
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 
+" *---GIT COMMIT SETTINGS---*
+autocmd Filetype gitcommit setlocal spell textwidth=72
