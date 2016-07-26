@@ -10,6 +10,8 @@ co = checkout
 br = branch
 diff = diff --word-diff
 dc = diff --cached
+[commit]
+  template = ~/.gitmessage
 [core]
 	excludesfile = $HOME/.gitignore_global
 	editor = $EDITOR
