@@ -1,0 +1,11 @@
+.#*
+*.beam
+.DS_*
+.git/
+.idea
+.tern-port
+
+# JS
+npm-debug.log
+node_modules/
+bower_components/
