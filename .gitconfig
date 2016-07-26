@@ -11,7 +11,7 @@ br = branch
 diff = diff --word-diff
 dc = diff --cached
 [core]
-	excludesfile = /Users/mark/.gitignore_global
+	excludesfile = $HOME/.gitignore_global
 	editor = $EDITOR
 [user]
 	name = Mark Chandler
