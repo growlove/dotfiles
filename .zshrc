@@ -12,6 +12,10 @@ alias sudoedit="sudo $EDITOR"
 # dotfiles repo command
 alias config='/usr/bin/git --git-dir=/Users/mark/.dotfiles/ --work-tree=/Users/mark'
 
+if [ -x /usr/local/bin/ag ]; then
+  alias ag='ag --path-to-agignore ~/.agignore'
+fi
+
 bindkey -e
 bindkey '^[[1;9C' forward-word
 bindkey '^[[1;9D' backward-word
