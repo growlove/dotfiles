@@ -7,44 +7,34 @@ Plug 'tpope/vim-sensible'
 Plug 'dracula/vim'
 
 " *---QOL PLUGINS---*
-Plug 'alvan/vim-closetag'
-
 Plug 'easymotion/vim-easymotion'
-
 Plug 'ctrlpvim/ctrlp.vim'
-
-Plug 'tpope/vim-surround'
-
-Plug 'jiangmiao/auto-pairs'
-
-Plug 'scrooloose/nerdcommenter'
-
 Plug 'tpope/vim-endwise'
-
+Plug 'tpope/vim-surround'
+Plug 'jiangmiao/auto-pairs'
+Plug 'alvan/vim-closetag'
+Plug 'scrooloose/nerdcommenter'
 Plug 'godlygeek/tabular'
-
 Plug 'tpope/vim-repeat'
-
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'xolox/vim-misc' " required for vim-session
+Plug 'xolox/vim-session'
 
 " *---PLATFORM SPECIFIC---*
 Plug 'saltstack/salt-vim'
+Plug 'ekalinin/Dockerfile.vim'
+Plug 'mattn/emmet-vim'
 
-" js
+" *---LANG SPECIFIC---*
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
-
 Plug 'elmcast/elm-vim'
-
-Plug 'ekalinin/Dockerfile.vim'
-
-" rb/rails
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
-
 Plug 'elixir-lang/vim-elixir'
-
+Plug 'cakebaker/scss-syntax.vim'
 Plug 'stephpy/vim-yaml'
+Plug 'helino/vim-json'
 
 call plug#end()
 
