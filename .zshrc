@@ -9,6 +9,9 @@ alias e="$EDITOR"
 alias vim="mvim -v"
 alias sudoedit="sudo $EDITOR"
 
+# dotfiles repo command
+alias config='/usr/bin/git --git-dir=/Users/mark/.dotfiles/ --work-tree=/Users/mark'
+
 bindkey -e
 bindkey '^[[1;9C' forward-word
 bindkey '^[[1;9D' backward-word
@@ -33,4 +36,3 @@ antigen bundle kennethreitz/autoenv
 antigen apply
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-alias config='/usr/bin/git --git-dir=/Users/mark/.dotfiles/ --work-tree=/Users/mark'
