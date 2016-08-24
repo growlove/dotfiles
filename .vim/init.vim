@@ -66,6 +66,9 @@ runtime install.vim
 runtime plugins.vim
 runtime keybindings.vim
 
+" Disable netrwhist file
+let g:netrw_dirhistmax = 0
+
 " *---THEME---*
 let base16colorspace=256
 set t_Co=256

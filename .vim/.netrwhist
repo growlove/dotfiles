@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/Users/mark/Workspace/projects/starving-artist'
-let g:netrw_dirhist_2='/Users/mark/Workspace/projects/tessera'
-let g:netrw_dirhist_3='/Users/mark/.oh-my-zsh'
-let g:netrw_dirhist_4='/Users/mark/.tmux'
-let g:netrw_dirhist_5='/Users/mark'
-let g:netrw_dirhist_6='/Users/mark/.vim'
