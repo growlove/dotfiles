@@ -6,7 +6,6 @@ nnoremap <leader><leader> <c-^>
 
 " remap jj to escape in insert mode
 inoremap jj <Esc>
-nnoremap JJJJ <Nop>
 
 "" search settings
 nnoremap <leader>i :set incsearch!<CR>
