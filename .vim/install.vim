@@ -7,6 +7,7 @@ Plug 'tpope/vim-sensible'
 Plug 'dracula/vim'
 
 " *---QOL PLUGINS---*
+Plug 'Valloric/YouCompleteMe'
 Plug 'easymotion/vim-easymotion'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-endwise'
