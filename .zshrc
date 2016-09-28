@@ -1,4 +1,8 @@
-export EDITOR="vim"
+ed="vim"
+if [ -x /usr/local/bin/mvim ]; then
+  ed="mvim -v"
+fi
+export EDITOR="$ed"
 export VISUAL="$EDITOR"
 
 # Aliases
