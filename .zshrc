@@ -28,8 +28,10 @@ if [ -f /usr/local/opt/nvm/nvm.sh ]; then
   source /usr/local/opt/nvm/nvm.sh
 fi
 
-export GOPATH=/Users/mark/Workspace/go
-export PATH=$PATH:$GOPATH/bin
+if [ -d /Users/mark/Workspace/go ]; then
+  export GOPATH=/Users/mark/Workspace/go
+  export PATH=$PATH:$GOPATH/bin
+fi
 
 if [ -d ~/Library/Android/sdk ]; then
   export ANDROID_HOME=~/Library/Android/sdk
