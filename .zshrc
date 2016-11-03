@@ -1,6 +1,7 @@
 ed="vim"
 if [ -x /usr/local/bin/mvim ]; then
   ed="mvim -v"
+  alias vim="mvim -v"
 fi
 export EDITOR="$ed"
 export VISUAL="$EDITOR"
@@ -10,7 +11,6 @@ alias r="rails"
 alias g="git"
 alias c="clear"
 alias e="$EDITOR"
-alias vim="mvim -v"
 alias sudoedit="sudo $EDITOR"
 
 # dotfiles repo command
