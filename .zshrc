@@ -29,6 +29,11 @@ source /usr/local/opt/nvm/nvm.sh
 export GOPATH=/Users/mark/Workspace/go
 export PATH=$PATH:$GOPATH/bin
 
+if [ -d ~/Library/Android/sdk ]; then
+  export ANDROID_HOME=~/Library/Android/sdk
+  export PATH=$PATH:$ANDROID_HOME/tools
+fi
+
 # oh-my-zsh loading & config
 export ZSH=/Users/mark/.oh-my-zsh
 export ZSH_THEME="dracula"
