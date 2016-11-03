@@ -35,10 +35,12 @@ if [ -d ~/Library/Android/sdk ]; then
 fi
 
 # oh-my-zsh loading & config
-export ZSH=/Users/mark/.oh-my-zsh
-export ZSH_THEME="dracula"
-plugins=(git)
-source $ZSH/oh-my-zsh.sh
+if [ -d /Users/mark/.oh-my-zsh ]; then
+  export ZSH=/Users/mark/.oh-my-zsh
+  export ZSH_THEME="dracula"
+  plugins=(git)
+  source $ZSH/oh-my-zsh.sh
+fi
 
 # antigen loading & config
 source /Users/mark/.antigen.zsh
