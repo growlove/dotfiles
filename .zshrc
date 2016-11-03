@@ -24,7 +24,9 @@ bindkey -e
 bindkey '^[[1;9C' forward-word
 bindkey '^[[1;9D' backward-word
 
-source /usr/local/opt/nvm/nvm.sh
+if [ -f /usr/local/opt/nvm/nvm.sh ]; then
+  source /usr/local/opt/nvm/nvm.sh
+fi
 
 export GOPATH=/Users/mark/Workspace/go
 export PATH=$PATH:$GOPATH/bin
