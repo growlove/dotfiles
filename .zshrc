@@ -43,12 +43,14 @@ if [ -d /Users/mark/.oh-my-zsh ]; then
 fi
 
 # antigen loading & config
-source /Users/mark/.antigen.zsh
-antigen use oh-my-zsh
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen theme zenorocha/dracula-theme zsh/dracula
-antigen bundle kennethreitz/autoenv
-antigen apply
+if [ -f /Users/mark/.antigen.zsh ]; then
+  source /Users/mark/.antigen.zsh
+  antigen use oh-my-zsh
+  antigen bundle zsh-users/zsh-syntax-highlighting
+  antigen theme zenorocha/dracula-theme zsh/dracula
+  antigen bundle kennethreitz/autoenv
+  antigen apply
+fi
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
