@@ -50,10 +50,15 @@ fi
 if [ -f /Users/mark/.antigen.zsh ]; then
   source /Users/mark/.antigen.zsh
   antigen use oh-my-zsh
-  antigen bundle zsh-users/zsh-syntax-highlighting
   antigen theme zenorocha/dracula-theme zsh/dracula
   antigen bundle kennethreitz/autoenv
   antigen apply
+fi
+
+if [[ -z ${INSIDE_EMACS} ]]; then
+  # Don't load inside emacs
+  # Breaks multiterm
+  antigen bundle zsh-users/zsh-syntax-highlighting
 fi
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
