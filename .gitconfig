@@ -17,6 +17,7 @@
   br = branch
   diff = diff --word-diff
   dc = diff --cached
+	dsf = "!f() { [ -z \"$GIT_PREFIX\" ] || cd \"$GIT_PREFIX\" && git diff --color \"$@\" | diff-so-fancy  | less --tabs=4 -RFX; }; f"
 [commit]
   template = ~/.gitmessage
 [core]
