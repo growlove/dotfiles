@@ -13,6 +13,9 @@ set ruler
 set scrolloff=5
 set sidescrolloff=5
 
+" delete trailing whitespace on save
+autocmd BufWritePre * %s/\s\+$//e
+
 " watch for file changes
 set autoread
 
