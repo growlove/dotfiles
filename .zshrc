@@ -63,4 +63,7 @@ fi
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
-export PATH="$HOME/.yarn/bin:$PATH"
+# import yarn binaries if installed through brew
+if [ -x /usr/local/bin/yarn ]; then
+  export PATH="$PATH:`yarn global bin`"
+fi
