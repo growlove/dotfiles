@@ -17,7 +17,7 @@ alias sudoedit="sudo $EDITOR"
 alias config='/usr/bin/git --git-dir=/Users/mark/.dotfiles/ --work-tree=/Users/mark'
 
 if [ -x /usr/local/bin/ag ]; then
-  alias ag='ag --path-to-agignore ~/.agignore'
+  alias ag='ag -p ~/.agignore'
 fi
 
 bindkey -e
