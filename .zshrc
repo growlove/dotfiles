@@ -64,6 +64,7 @@ if [[ -z ${INSIDE_EMACS} ]]; then
 fi
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/.cargo/bin" # Add Rust cargo to PATH
 
 # import yarn binaries if installed through brew
 if [ -x /usr/local/bin/yarn ]; then
