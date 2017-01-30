@@ -70,3 +70,6 @@ export PATH="$PATH:$HOME/.cargo/bin" # Add Rust cargo to PATH
 if [ -x /usr/local/bin/yarn ]; then
   export PATH="$PATH:`yarn global bin`"
 fi
+
+# OPAM configuration
+. /Users/mark/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
