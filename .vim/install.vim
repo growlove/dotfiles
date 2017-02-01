@@ -28,6 +28,7 @@ Plug 'ekalinin/Dockerfile.vim'
 Plug 'mattn/emmet-vim'
 
 " *---LANG SPECIFIC---*
+Plug 'rgrinberg/vim-ocaml'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'elmcast/elm-vim'
