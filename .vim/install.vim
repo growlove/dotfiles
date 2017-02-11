@@ -7,6 +7,7 @@ Plug 'tpope/vim-sensible'
 Plug 'dracula/vim'
 
 " *---QOL PLUGINS---*
+Plug 'tpope/vim-unimpaired'
 Plug 'Valloric/YouCompleteMe'
 Plug 'easymotion/vim-easymotion'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -39,6 +40,7 @@ Plug 'elixir-lang/vim-elixir'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'stephpy/vim-yaml'
 Plug 'helino/vim-json'
+Plug 'fatih/vim-go'
 
 call plug#end()
 
