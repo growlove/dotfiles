@@ -16,6 +16,13 @@ alias sudoedit="sudo $EDITOR"
 # dotfiles repo command
 alias config='/usr/bin/git --git-dir=/Users/mark/.dotfiles/ --work-tree=/Users/mark'
 
+# rust aliases
+if [ -x /usr/local/bin/cargo ]; then
+  alias cr="cargo run"
+  alias cb="cargo build"
+  alias ct="cargo test"
+fi
+
 function pcd { cd ${PWD%/$1/*}/$1; }
 
 if [ -x /usr/local/bin/ag ]; then
