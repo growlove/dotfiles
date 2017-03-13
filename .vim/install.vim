@@ -23,7 +23,6 @@ Plug 'xolox/vim-misc' " required for vim-session
 Plug 'xolox/vim-session'
 
 " *---PLATFORM SPECIFIC---*
-Plug 'saltstack/salt-vim'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'mattn/emmet-vim'
 Plug 'junegunn/fzf.vim'
