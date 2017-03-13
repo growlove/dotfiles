@@ -39,7 +39,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'elixir-lang/vim-elixir'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'stephpy/vim-yaml'
-Plug 'helino/vim-json'
+Plug 'elzr/vim-json'
 Plug 'fatih/vim-go'
 
 call plug#end()
