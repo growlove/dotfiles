@@ -24,6 +24,7 @@ Plug 'xolox/vim-session'
 " *---PLATFORM SPECIFIC---*
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'mattn/emmet-vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install -all' }
 Plug 'junegunn/fzf.vim'
 
 " *---LANG SPECIFIC---*
