@@ -27,6 +27,7 @@ Plug 'xolox/vim-session'
 Plug 'saltstack/salt-vim'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'mattn/emmet-vim'
+Plug 'junegunn/fzf.vim'
 
 " *---LANG SPECIFIC---*
 Plug 'rgrinberg/vim-ocaml'
