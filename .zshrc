@@ -80,3 +80,6 @@ fi
 
 # OPAM configuration
 . /Users/mark/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_COMMAND='ag -g ""'
