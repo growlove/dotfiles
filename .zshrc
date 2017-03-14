@@ -14,7 +14,7 @@ alias e="$EDITOR"
 alias sudoedit="sudo $EDITOR"
 
 # dotfiles repo command
-alias config='/usr/bin/git --git-dir=/Users/mark/.dotfiles/ --work-tree=/Users/mark'
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=/Users/mark'
 
 # rust aliases
 if [ -x /usr/local/bin/cargo ]; then
@@ -26,7 +26,7 @@ fi
 function pcd { cd ${PWD%/$1/*}/$1; }
 
 if [ -x /usr/local/bin/ag ]; then
-  alias ag='ag -p ~/.agignore'
+  alias ag='ag -p $HOME/.agignore'
 fi
 
 bindkey -e
@@ -37,27 +37,27 @@ if [ -f /usr/local/opt/nvm/nvm.sh ]; then
   source /usr/local/opt/nvm/nvm.sh
 fi
 
-if [ -d /Users/mark/Workspace/go ]; then
-  export GOPATH=/Users/mark/Workspace/go
+if [ -d $HOME/Workspace/go ]; then
+  export GOPATH=$HOME/Workspace/go
   export PATH=$PATH:$GOPATH/bin
 fi
 
-if [ -d ~/Library/Android/sdk ]; then
-  export ANDROID_HOME=~/Library/Android/sdk
+if [ -d $HOME/Library/Android/sdk ]; then
+  export ANDROID_HOME=$HOME/Library/Android/sdk
   export PATH=$PATH:$ANDROID_HOME/tools
 fi
 
 # oh-my-zsh loading & config
-if [ -d /Users/mark/.oh-my-zsh ]; then
-  export ZSH=/Users/mark/.oh-my-zsh
+if [ -d $HOME/.oh-my-zsh ]; then
+  export ZSH=$HOME/.oh-my-zsh
   export ZSH_THEME="dracula"
   plugins=(git)
   source $ZSH/oh-my-zsh.sh
 fi
 
 # antigen loading & config
-if [ -f /Users/mark/.antigen.zsh ]; then
-  source /Users/mark/.antigen.zsh
+if [ -f $HOME/.antigen.zsh ]; then
+  source $HOME/.antigen.zsh
   antigen use oh-my-zsh
   antigen theme zenorocha/dracula-theme zsh/dracula
   antigen bundle kennethreitz/autoenv
@@ -74,12 +74,13 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="$PATH:$HOME/.cargo/bin" # Add Rust cargo to PATH
 
 # import yarn binaries if installed through brew
+[ - ]
 if [ -x /usr/local/bin/yarn ]; then
   export PATH="$PATH:`yarn global bin`"
 fi
 
 # OPAM configuration
-. /Users/mark/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+. $HOME/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 export FZF_DEFAULT_COMMAND='ag -g ""'
