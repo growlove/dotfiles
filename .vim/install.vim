@@ -28,8 +28,6 @@ Plug 'junegunn/fzf.vim'
 
 " *---LANG SPECIFIC---*
 Plug 'rgrinberg/vim-ocaml'
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
 Plug 'elmcast/elm-vim'
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
@@ -39,6 +37,11 @@ Plug 'cakebaker/scss-syntax.vim'
 Plug 'stephpy/vim-yaml'
 Plug 'elzr/vim-json'
 Plug 'fatih/vim-go'
+
+" JS
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'fleischie/vim-styled-components'
 
 call plug#end()
 
