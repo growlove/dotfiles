@@ -38,7 +38,7 @@ if command_exists cargo; then
 fi
 
 if command_exists ag; then
-  alias ag='ag -p $HOME/.agignore'
+  alias ag='ag --hidden -p $HOME/.agignore'
 fi
 
 if command_exists yarn; then
