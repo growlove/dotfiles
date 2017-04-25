@@ -1,1 +1,1 @@
-/Users/mark/.vim/init.vim
+./.vim/init.vim
