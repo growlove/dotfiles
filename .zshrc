@@ -18,7 +18,7 @@ fi
 export VISUAL="$EDITOR"
 
 # dotfiles repo alias
-alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=/Users/mark'
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 alias g="git"
 alias c="clear"
