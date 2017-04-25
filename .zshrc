@@ -80,23 +80,7 @@ if [ -d $HOME/.oh-my-zsh ]; then
   plugins=(git)
   source $ZSH/oh-my-zsh.sh
 fi
-
-# antigen loading & config
-if [ -f $HOME/.antigen.zsh ]; then
-  source $HOME/.antigen.zsh
-  antigen use oh-my-zsh
-  antigen theme zenorocha/dracula-theme zsh/dracula
-  antigen bundle kennethreitz/autoenv
-  antigen apply
-fi
 # }}
-
-# emacs-specific config
-if [[ -z ${INSIDE_EMACS} ]]; then
-  # Don't load inside emacs
-  # Breaks multiterm
-  antigen bundle zsh-users/zsh-syntax-highlighting
-fi
 
 # tmux-specific bindings
 bindkey -e
