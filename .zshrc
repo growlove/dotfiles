@@ -1,3 +1,11 @@
+# Source .scripts
+
+if [ -d "$HOME/.scripts" ]; then
+  for f in $HOME/.scripts/* $HOME/.scripts/**/*; do
+    . $f
+  done
+fi
+
 # Proxy Configuration
 
 if [ -f $HOME/.proxy_credentials ]; then
