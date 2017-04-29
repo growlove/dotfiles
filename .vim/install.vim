@@ -37,6 +37,7 @@ Plug 'cakebaker/scss-syntax.vim'
 Plug 'stephpy/vim-yaml'
 Plug 'elzr/vim-json'
 Plug 'fatih/vim-go'
+Plug 'udalov/kotlin-vim'
 
 " JS
 Plug 'pangloss/vim-javascript'
