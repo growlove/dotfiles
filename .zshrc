@@ -1,3 +1,23 @@
+# Proxy Configuration
+
+if [ -f $HOME/.proxy_credentials ]; then
+  CREDENTIALS=$(<$HOME/.proxy_credentials)
+  PROXY=http://$CREDENTIALS@proxy.kroger.com:3128
+
+  export http_proxy=$PROXY
+  export https_proxy=$http_proxy
+
+  function proxy_enable {
+    export http_proxy=$PROXY
+    export https_proxy=$PROXY
+  }
+
+  function proxy_disable {
+    export http_proxy=
+    export https_proxy=
+  }
+fi
+
 # Custom commands
 # {{
 command_exists() {
