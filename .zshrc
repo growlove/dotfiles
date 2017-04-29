@@ -7,14 +7,14 @@ if [ -f $HOME/.proxy_credentials ]; then
   export http_proxy=$PROXY
   export https_proxy=$http_proxy
 
-  function proxy_enable {
-    export http_proxy=$PROXY
-    export https_proxy=$PROXY
-  }
-
-  function proxy_disable {
-    export http_proxy=
-    export https_proxy=
+  function proxy_toggle {
+    if ((${#http_proxy} > 0)); then
+      unset http_proxy
+      unset https_proxy
+    else
+      export http_proxy=$PROXY
+      export https_proxy=$PROXY
+    fi
   }
 fi
 
