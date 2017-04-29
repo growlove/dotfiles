@@ -12,7 +12,6 @@ command_exists() {
   type "$1" &> /dev/null;
 }
 
-function pcd { cd ${PWD%/$1/*}/$1; }
 # }}
 
 # Aliases & Exports
