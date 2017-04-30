@@ -5,7 +5,8 @@ function kotlin_run() {
   JAR_FILE="${KT_FILE%.kt}.jar"
 
   kotlinc $KT_FILE -include-runtime -d $JAR_FILE
-  java -jar $JAR_FILE
-
-  rm $JAR_FILE
+  if ((! $? > 0)); then
+    java -jar $JAR_FILE
+    rm $JAR_FILE
+  fi
 }
