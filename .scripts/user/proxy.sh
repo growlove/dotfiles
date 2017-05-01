@@ -1,8 +1,9 @@
 # Proxy Configuration
 
-if [ -f $HOME/.proxy_credentials ]; then
+if [ -f $HOME/.proxy_credentials ] && [ -f $HOME/.proxy_server ]; then
   CREDENTIALS=$(<$HOME/.proxy_credentials)
-  PROXY=http://$CREDENTIALS@proxy.kroger.com:3128
+  SERVER=$(<$HOME/.proxy_server)
+  PROXY=http://$CREDENTIALS@$SERVER
 
   export http_proxy=$PROXY
   export https_proxy=$http_proxy
