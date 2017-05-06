@@ -38,6 +38,7 @@ Plug 'stephpy/vim-yaml'
 Plug 'elzr/vim-json'
 Plug 'fatih/vim-go'
 Plug 'udalov/kotlin-vim'
+Plug 'vim-scripts/groovy.vim'
 
 " JS
 Plug 'pangloss/vim-javascript'
