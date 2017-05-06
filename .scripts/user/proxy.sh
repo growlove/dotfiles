@@ -7,8 +7,7 @@ if [ -f $HOME/.proxy_credentials ] && [ -f $HOME/.proxy_server ]; then
   SERVER=$(<$HOME/.proxy_server)
   PROXY=http://$CREDENTIALS@$SERVER
 
-  export http_proxy=$PROXY
-  export https_proxy=$http_proxy
+  proxy_location_check --silent
 
   function proxy {
     SILENT=false
@@ -49,7 +48,7 @@ if [ -f $HOME/.proxy_credentials ] && [ -f $HOME/.proxy_server ]; then
     }
 
     if [ "$#" -eq 0 ]; then
-      toggle
+      proxy_location_check
     else
       case "$1" in
         enable)
@@ -68,14 +67,36 @@ if [ -f $HOME/.proxy_credentials ] && [ -f $HOME/.proxy_server ]; then
           disable
           ;;
 
+        toggle)
+          toggle
+          ;;
+
         status)
           status
           ;;
 
         *)
-          echo "Usage: $0 {enable|disable|status}"
+          echo "Usage: $0 {enable|disable|toggle|status}"
           echo "\nIf provided no arguments, proxy is toggled."
       esac
     fi
   }
 fi
+
+# Automatically enable/disable proxy settings
+# based on current network location and
+# .proxy_locations file.
+function proxy_location_check {
+  if [ -f $HOME/.proxy_locations ]; then
+    LOCATION=`networksetup -getcurrentlocation`
+    grep -Fxq $LOCATION $HOME/.proxy_locations
+
+    if [ "$?" -eq 0 ]; then
+      proxy enable $@
+    else
+      proxy disable $@
+    fi
+  else
+    proxy disable $@
+  fi
+}
