@@ -1,5 +1,7 @@
 # Proxy Configuration
 
+# Enable proxy command if .proxy_credentials
+# and .proxy_server files exist.
 if [ -f $HOME/.proxy_credentials ] && [ -f $HOME/.proxy_server ]; then
   CREDENTIALS=$(<$HOME/.proxy_credentials)
   SERVER=$(<$HOME/.proxy_server)
@@ -9,14 +11,23 @@ if [ -f $HOME/.proxy_credentials ] && [ -f $HOME/.proxy_server ]; then
   export https_proxy=$http_proxy
 
   function proxy {
+    SILENT=false
+    if [[ $@ == *"--silent"* ]]; then
+      SILENT=true
+    fi
+
     function enable {
-      echo "Enabling proxy"
+      if ! [ "$SILENT" = true ]; then
+        echo "Enabling proxy"
+      fi
       export http_proxy=$PROXY
       export https_proxy=$PROXY
     }
 
     function disable {
-      echo "Disabling proxy"
+      if ! [ "$SILENT" = true ]; then
+        echo "Disabling proxy"
+      fi
       unset http_proxy
       unset https_proxy
     }
