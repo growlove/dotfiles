@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+if command_exists yarn; then
+  export PATH="$PATH:`yarn global bin`"
+fi
+
+if [ -f /usr/local/opt/nvm/nvm.sh ]; then
+  . /usr/local/opt/nvm/nvm.sh
+fi
