@@ -6,12 +6,14 @@ if [ -d "$HOME/.scripts" ]; then
   done
 fi
 
-# Custom commands
+# Source .zshrc_local
+#
+# File contains system-specific configuration that
+# doesn't belong in the repo.
 # {{
-command_exists() {
-  type "$1" &> /dev/null;
-}
-
+if [ -f $HOME/.zshrc_local ]; then
+  . $HOME/.zshrc_local
+fi
 # }}
 
 # Aliases & Exports
