@@ -19,6 +19,8 @@ Plug 'tpope/vim-repeat'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'xolox/vim-misc' " required for vim-session
 Plug 'xolox/vim-session'
+Plug 'SirVer/ultisnips'
+Plug 'ervandew/supertab'
 
 " *---PLATFORM SPECIFIC---*
 Plug 'ekalinin/Dockerfile.vim'
@@ -46,4 +48,12 @@ Plug 'mxw/vim-jsx'
 Plug 'fleischie/vim-styled-components'
 
 call plug#end()
+
+filetype plugin indent on
+set runtimepath+=~/.vim/ultisnips_rep
+filetype on
+
+let g:UltiSnipsSnippetsDir = "~/.vim/snips"
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "snips"]
+let g:UltiSnipsEditSplit = "context"
 
