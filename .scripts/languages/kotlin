@@ -11,3 +11,5 @@ function kotlin_run() {
     rm $JAR_FILE
   fi
 }
+
+alias kr=kotlin_run
