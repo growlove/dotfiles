@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 
+if [ -d $HOME/go ]; then
+  export GOPATH=$HOME/go
+  export PATH=$PATH:$GOPATH/bin
+fi
+
 if [ -d $HOME/Workspace/go ]; then
-  export GOPATH=$HOME/Workspace/go
+  export GOPATH=$HOME/go
   export PATH=$PATH:$GOPATH/bin
 fi
