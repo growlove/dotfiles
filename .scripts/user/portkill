@@ -5,20 +5,28 @@ function _portkill_help {
   echo "Kills applications using provided port."
 }
 
+function _portkill_kill_listener {
+  local listener
+  lsof -i:$1 | awk -v LISTEN="(LISTEN)" '$10 == LISTEN { print $0 }' | while read line; do
+    listener=$line
+  done
+
+  if [ -z "$listener" ]; then
+    echo "No process listening on port $1"
+  else
+    local process=$(echo $listener | awk '{ print $1 }')
+    local pid=$(echo $listener | awk '{ print $2 }')
+    local user=$(echo $listener | awk '{ print $3 }')
+    echo "Killing process $process (pid: $pid) of user $user."
+    kill -TERM $pid || kill -KILL $pid
+  fi
+}
+
 function portkill {
   if [ "$#" -eq 0 ]; then
     _portkill_help "$0"
   else
-    _pk_pid=$(lsof -i:$1 -t)
-    if [ -z "$_pk_pid" ]; then
-      echo "No application found using port $1."
-    else
-      _pk_lsof=$(lsof -i:$1 | awk 'FNR > 1 { print $0 }')
-      _pk_command=$(echo $_pk_lsof | awk '{ print $1 }')
-      _pk_user=$(echo $_pk_lsof | awk '{ print $3 }')
-      echo "Killing $_pk_command ($_pk_pid) run by $_pk_user"
-      kill -TERM $_pk_pid || kill -KILL $_pk_pid
-    fi
-    unset _pk_pid _pk_lsof _pk_command _pk_user
+    _portkill_kill_listener $1
   fi
 }
+
