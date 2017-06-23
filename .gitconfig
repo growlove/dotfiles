@@ -28,3 +28,5 @@
 	email = mark.allen.chandler@gmail.com
 [push]
 	default = simple
+[include]
+  path = ~/.gitconfig.local
