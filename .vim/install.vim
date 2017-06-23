@@ -21,6 +21,7 @@ Plug 'xolox/vim-misc' " required for vim-session
 Plug 'xolox/vim-session'
 Plug 'SirVer/ultisnips'
 Plug 'ervandew/supertab'
+Plug 'sbdchd/neoformat'
 
 " *---PLATFORM SPECIFIC---*
 Plug 'ekalinin/Dockerfile.vim'
