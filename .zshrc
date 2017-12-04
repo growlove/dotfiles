@@ -5,11 +5,6 @@ command_exists() {
 # Source .scripts
 # {{
 if [ -d "$HOME/.scripts" ]; then
-  local priority=(user/proxy)
-  for arg in "$priority"; do
-    . $HOME/.scripts/$arg
-  done
-
   for f in $HOME/.scripts/* $HOME/.scripts/**/*; do
     . $f
   done
