@@ -8,7 +8,6 @@ Plug 'dracula/vim'
 
 " *---QOL PLUGINS---*
 Plug 'tpope/vim-unimpaired'
-Plug 'Valloric/YouCompleteMe'
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-surround'
@@ -22,6 +21,9 @@ Plug 'xolox/vim-session'
 Plug 'SirVer/ultisnips'
 Plug 'ervandew/supertab'
 Plug 'sbdchd/neoformat'
+Plug 'Shougo/deoplete.nvim'
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
 
 " *---PLATFORM SPECIFIC---*
 Plug 'ekalinin/Dockerfile.vim'
