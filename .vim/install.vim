@@ -44,6 +44,8 @@ Plug 'elzr/vim-json'
 Plug 'fatih/vim-go'
 Plug 'udalov/kotlin-vim'
 Plug 'vim-scripts/groovy.vim'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'mhartington/nvim-typescript'
 
 " JS
 Plug 'pangloss/vim-javascript'
