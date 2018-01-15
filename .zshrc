@@ -11,6 +11,12 @@ if [ -d "$HOME/.scripts" ]; then
 fi
 # }}
 
+# Aliases
+
+if [ -f $HOME/.aliases ]; then
+  . $HOME/.aliases
+fi
+
 # Source .zshrc_local
 #
 # File contains system-specific configuration that
@@ -21,30 +27,19 @@ if [ -f $HOME/.zshrc_local ]; then
 fi
 # }}
 
-# Aliases & Exports
-# {{
-if command_exists mvim; then
-  export EDITOR="mvim -v"
-  alias vim="mvim -v"
-else
-  export EDITOR="vim"
-fi
-export VISUAL=$EDITOR
-
-# dotfiles repo alias
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-
-alias g="git"
-alias c="clear"
-alias e="$EDITOR"
-alias sudoedit="sudo $EDITOR"
-
 # oh-my-zsh
 # {{
 if [ -d $HOME/.oh-my-zsh ]; then
   export ZSH=$HOME/.oh-my-zsh
   export ZSH_THEME="dracula"
-  plugins=(git)
   source $ZSH/oh-my-zsh.sh
 fi
 # }}
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export GOPATH="${HOME}/.go"
+export GOROOT="$(brew --prefix golang)/libexec"
+export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
