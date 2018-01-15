@@ -24,12 +24,14 @@ Plug 'sbdchd/neoformat'
 Plug 'Shougo/deoplete.nvim'
 Plug 'roxma/nvim-yarp'
 Plug 'roxma/vim-hug-neovim-rpc'
+Plug 'airblade/vim-gitgutter'
 
 " *---PLATFORM SPECIFIC---*
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'mattn/emmet-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install -all' }
 Plug 'junegunn/fzf.vim'
+Plug 'jparise/vim-graphql'
 
 " *---LANG SPECIFIC---*
 Plug 'rgrinberg/vim-ocaml'
@@ -45,12 +47,14 @@ Plug 'fatih/vim-go'
 Plug 'udalov/kotlin-vim'
 Plug 'vim-scripts/groovy.vim'
 Plug 'HerringtonDarkholme/yats.vim'
-Plug 'mhartington/nvim-typescript'
+Plug 'leafgarland/typescript-vim'
 
 " JS
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
-Plug 'fleischie/vim-styled-components'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'styled-components/vim-styled-components', { 'branch': 'develop' }
+
 
 call plug#end()
 
