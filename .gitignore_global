@@ -4,8 +4,11 @@
 .git/
 .idea
 .tern-port
+.commit
 
 # JS
 npm-debug.log
 node_modules/
 bower_components/
+
+.npmrc
